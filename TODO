@@ -7,7 +7,7 @@ DONE Filter amazon.com only. Or https://www.amazon.com/gp/cart/view.html/ref=nav
 
 Icons.
 Toggle Button with PNG.
-amazoncalc.plist
+amazong.plist
 settings.plist
 Code review. Will break easily?
 Unit testing.
@@ -22,7 +22,9 @@ Icon-128.png
 Drag a .png image file into your extension folder.
 The image should ideally be 14x14 or 16x16 pixels.
 The image is an alpha mask. It must contain an 8-bit alpha channel defining the part of the button face that is drawn, and nothing else.
-You can include an alternate image at double the resolution for use on high-resolution displays. Use the same name for the alternate image file, but append the characters @2x. For example, if your image is named myToolBarImg.png, the high-resolution image should be named myToolBarImg@2x.png.
+You can include an alternate image at double the resolution for use on high-resolution displays.
+Use the same name for the alternate image file, but append the characters @2x.
+For example, if your image is named myToolBarImg.png, the high-resolution image should be named myToolBarImg@2x.png.
 
 16x16
 1417201090_currency_exchange_1-16.png

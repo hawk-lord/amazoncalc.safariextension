@@ -86,7 +86,7 @@ if (!this.AmazonCalc) {
                         foundNode = true;
                         const price = parseFloat(aNode.nodeValue.replace(/[^0-9.]/g, ""));
                         const newSpanNode = document.createElement("span");
-                        newSpanNode.className = "amazoncalc";
+                        newSpanNode.className = "amazong";
                         aNode.parentNode.parentNode.insertBefore(newSpanNode, aNode.parentNode.nextSibling);
                         const parentDivNode = aNode.parentNode.parentNode.parentNode.parentNode;
                         let nextDiv;
@@ -124,7 +124,7 @@ if (!this.AmazonCalc) {
 
 
         const clear = () => {
-            const elementsToClear = document.getElementsByClassName("amazoncalc");
+            const elementsToClear = document.getElementsByClassName("amazong");
             while (elementsToClear[0]) {
                 elementsToClear[0].parentNode.removeChild(elementsToClear[0]);
             }
@@ -152,8 +152,19 @@ if (!this.AmazonCalc) {
             }
         };
 
+        const onSendEnabledStatus = (aStatus) => {
+            console.log("onSendEnabledStatus " + aStatus);
+            if (aStatus) {
+                calculate()
+            }
+            else {
+                clear();
+            }
+
+        };
+
         return {
-            calculate: calculate
+            onSendEnabledStatus: onSendEnabledStatus
         };
 
     }();
@@ -162,4 +173,4 @@ if (!this.AmazonCalc) {
 
 }
 
-this.AmazonCalc.calculate();
+// this.AmazonCalc.calculate();
